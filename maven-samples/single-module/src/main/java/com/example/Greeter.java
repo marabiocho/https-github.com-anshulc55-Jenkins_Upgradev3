@@ -1,4 +1,4 @@
-package com.example;
+package com.example kantin;
 
 /**
  * This is a class.
