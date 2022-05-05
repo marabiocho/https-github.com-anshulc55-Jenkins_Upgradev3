@@ -1,6 +1,16 @@
 pipeline {
       agent any
       stages {
+          stage('maven install') {
+    steps {
+      withMaven(globalMavenSettingsConfig: 'null', jdk: 'null', maven: 'null', mavenSettingsConfig: 'null') {
+    sh 'mvn clean install'
+}
+    }
+  }
+
+}
+
             stage('Init') {
                   steps {
                         echo 'Hi, this is Anshul from LevelUp360'
